@@ -1,0 +1,464 @@
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+
+@import url('http://fonts.googleapis.com/css?family=Pacifico');
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body, a {
+    margin: 0;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+.icons {
+    text-align: center;
+    margin-bottom: -7px;
+}
+
+h2, h3, span {
+    font-family: "Pacifico", sans-serif;
+}
+
+
+h3 {
+    font-size: 30px;
+}
+
+.badge {
+    padding: 10px;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: #000000;
+}
+
+/* ============================================================
+  PARALLAX
+============================================================ */
+section.module{
+    margin: 0;
+    padding: 0;
+}
+section.module h2 {
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+section.module p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+}
+section.module p:last-child {
+    margin-bottom: 0;
+}
+section.module.content {
+    padding: 40px 0;
+}
+section.module.parallax {
+    height: 105vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+section.module.parallax h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 48px;
+    line-height: 1em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+section.module.parallax h4 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 35px;
+    line-height: 1em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 1.5em;
+}
+
+section.module.parallax-0 {
+    background-image: url("img/titlebg1.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+}
+section.module.parallax-1 {
+    background-image: url("img/dance2.JPG");
+}
+section.module.parallax-2 {
+    background-image: url("img/badass.jpg");
+}
+section.module.parallax-3 {
+    background-image: url("img/it2.jpg");
+}
+
+section.module.parallax-4 {
+    background-image: url("img/tilebg2.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+    height: 150vh;
+}
+
+
+
+@media all and (min-width: 600px) {
+    section.module h2 {
+        font-size: 42px;
+    }
+    section.module p {
+        font-size: 20px;
+    }
+    section.module.parallax h1 {
+        font-size: 96px;
+    }
+}
+@media all and (min-width: 960px) {
+    section.module.parallax h1 {
+        font-size: 160px;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* align horizontal */
+    text-align: center;
+}
+
+.parallax .container {
+    height: 100vh;
+}
+
+.parallax-4 .container {
+    height: 150vh;
+}
+
+.icon {
+    display: inline-block;
+}
+
+svg {
+    height: 7vw;
+    fill: #ffffff;
+    padding: 10px;
+}
+
+svg:hover {
+
+}
+
+/* ============================================================
+  Portfolio
+============================================================ */
+
+figure {
+    margin: 5px;
+    position: relative;
+}
+figure img {
+    display: block;
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    height: auto;
+    border: 1.5px solid black;
+}
+figure figcaption {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    resize: vertical;
+    overflow: auto;
+}
+figure h3 {
+    color: #fff;
+    font-size: 2vw;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+figure span {
+    color: #fff;
+    opacity: 0.8;
+    display: block;
+    line-height: 1.2;
+}
+figure a.close-caption {
+    display: block;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #315a7d;
+}
+figure a.close-caption.hidden {
+    display: none
+}
+
+/* ============================================================
+  EFFECT
+============================================================ */
+
+#effect-2 {
+    margin: 0 7vw 5vh 7vw;
+    align-content: center;
+}
+
+#effect-2 a.close-caption {
+    top: 10px;
+    right: 10px;
+}
+#effect-2 figure figcaption {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#gugu figure figcaption {
+    background-color: #C4B49B;
+}
+
+#teresa figure figcaption {
+    background-color: #255E91;
+}
+
+#budget figure figcaption {
+    background-color: #669999;
+}
+
+
+#mckell figure figcaption {
+   background-color: #03652B;
+}
+
+#effect-2 figure img {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.no-touch #effect-2 figure:hover img,
+#effect-2 figure.hover img {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.no-touch #effect-2 figure:hover figcaption,
+#effect-2 figure.hover figcaption {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+/* ============================================================
+  MEDIA
+============================================================ */
+
+.col {
+    float: left;
+    margin: 0 20px 30px 20px;
+    max-width: 45%;
+}
+
+@media all and (max-width: 1200px) {
+    .col {
+        float: none;
+        margin-right: 0;
+        max-width: 100%;
+    }
+}
+@media all and (max-width: 615px) {
+    figure h3 {
+        font-size: 22px
+    }
+    figure span {
+        font-size: 12px
+    }
+}
+@media all and (max-width: 480px) {
+    #effect-2 figure figcaption h3 {
+        margin-top: 100px
+    }
+}
+@media all and (max-width: 360px) {
+    #effect-2 figure figcaption h3 {
+        margin-top: 80px
+    }
+}
+
+
+/* ============================================================
+  WOBBLE SKEW
+============================================================ */
+@-webkit-keyframes hvr-wobble-skew {
+    16.65% {
+        -webkit-transform: skew(-12deg);
+        transform: skew(-12deg);
+    }
+
+    33.3% {
+        -webkit-transform: skew(10deg);
+        transform: skew(10deg);
+    }
+
+    49.95% {
+        -webkit-transform: skew(-6deg);
+        transform: skew(-6deg);
+    }
+
+    66.6% {
+        -webkit-transform: skew(4deg);
+        transform: skew(4deg);
+    }
+
+    83.25% {
+        -webkit-transform: skew(-2deg);
+        transform: skew(-2deg);
+    }
+
+    100% {
+        -webkit-transform: skew(0);
+        transform: skew(0);
+    }
+}
+
+@keyframes hvr-wobble-skew {
+    16.65% {
+        -webkit-transform: skew(-12deg);
+        transform: skew(-12deg);
+    }
+
+    33.3% {
+        -webkit-transform: skew(10deg);
+        transform: skew(10deg);
+    }
+
+    49.95% {
+        -webkit-transform: skew(-6deg);
+        transform: skew(-6deg);
+    }
+
+    66.6% {
+        -webkit-transform: skew(4deg);
+        transform: skew(4deg);
+    }
+
+    83.25% {
+        -webkit-transform: skew(-2deg);
+        transform: skew(-2deg);
+    }
+
+    100% {
+        -webkit-transform: skew(0);
+        transform: skew(0);
+    }
+}
+
+.hvr-wobble-skew {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+.hvr-wobble-skew:hover, .hvr-wobble-skew:focus, .hvr-wobble-skew:active {
+    -webkit-animation-name: hvr-wobble-skew;
+    animation-name: hvr-wobble-skew;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/* ==========================A==================================
+  HEXAGON
+============================================================ */
+
+.meter {
+    height: 20px;  /* Can be anything */
+    position: relative;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43,194,83);
+    background-image: linear-gradient(
+            center bottom,
+            rgb(43,194,83) 37%,
+            rgb(84,240,84) 69%
+    );
+    box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
+
+.meter > span.full {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*======================================================================
+                                   STAMP
+========================================================================*/
